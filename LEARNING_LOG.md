@@ -5,3 +5,9 @@
 **What I did:** Created the production src layout, configured a dedicated Python 3.11 virtual environment with all required dependencies, set up .gitignore to isolate data and models, connected the remote GitHub repository, and documented the project foundation.
 
 **What I learned:** Isolating dependencies in a dedicated virtual environment prevents package version conflicts. A clean src package layout separates reusable production code from notebooks and deployment interfaces, while .gitignore safeguards repository performance and data privacy.
+
+## S2 — Exploratory Data Analysis & Anomaly Resolution (2026-09-07)
+
+**What I did:** Inspected the 7,043 customer records across 21 columns, resolved a subtle data quirk where 11 rows in TotalCharges stored whitespace strings for brand new customers (tenure=0), quantified the target class imbalance (73.46% retained vs 26.54% churned), and visualized key churn relationships across contract types, tenure, and monthly charges in an executed notebook.
+
+**What I learned:** Raw accuracy is fundamentally deceptive on imbalanced datasets (~26.5% minority class) since a naive non-churn baseline scores 73.5% while finding zero churners. Converting string-encoded missing values via domain knowledge (zero tenure implies zero total charges) prevents data leakage while preserving valid customer records.
