@@ -17,3 +17,9 @@
 **What I did:** Built a modular ColumnTransformer encapsulating median imputation and standard scaling for numeric features alongside most-frequent imputation and ignore-unknown one-hot encoding for categorical features, integrated into an end-to-end Pipeline validated by 4 automated unit tests.
 
 **What I learned:** Encapsulating feature transformations strictly inside the Pipeline ensures that encoders and scalers are fitted exclusively on training folds during cross-validation, completely eliminating data leakage. Setting handle_unknown="ignore" on OneHotEncoder ensures robust inference when unseen categories arrive at serving time.
+
+## S4 — Stratified 5-Fold Cross-Validation Model Comparison (2026-09-10)
+
+**What I did:** Benchmarked 5 candidate models (Dummy Baseline, Logistic Regression, Random Forest, HistGradientBoosting, LightGBM) across 5 stratified folds with class_weight="balanced", measuring ROC-AUC, PR-AUC, F1-Score, and Brier Score.
+
+**What I learned:** Logistic Regression achieved the top ranking discrimination (ROC-AUC: 0.8449, PR-AUC: 0.6554) outperforming tree ensembles under standard scaling, while the Dummy Baseline's PR-AUC (0.2654) matched the exact class prevalence. HistGradientBoosting and LightGBM demonstrated superior probability calibration with lower Brier scores (0.1587 and 0.1597).
