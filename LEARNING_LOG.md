@@ -29,3 +29,9 @@
 **What I did:** Tuned hyperparameters via RandomizedSearchCV, swept classification thresholds against a realistic business retention cost matrix ($C_{FP}=\$15$, $C_{FN}=\$100$), and evaluated the optimized model on an untouched 20% hold-out test set (1,409 customers).
 
 **What I learned:** Lowering the decision threshold from 0.50 to 0.25 reduced validation business cost by 15.93% and produced $1,220 in net financial savings (10.72% reduction) on the hold-out test set, proving that optimizing decision thresholds against asymmetric business costs provides far greater economic value than pursuing raw accuracy.
+
+## S6 — SHAP Explainability & Reduced Serving Model (2026-09-13)
+
+**What I did:** Computed TreeExplainer SHAP values to explain global feature rankings (beeswarm plot) and individual customer risk drivers (waterfall plot), then engineered a 9-feature reduced serving pipeline for real-time inference.
+
+**What I learned:** Pruning uninformative features down to the top 9 SHAP drivers (Contract, tenure, MonthlyCharges, TotalCharges, InternetService, OnlineSecurity, TechSupport, PaymentMethod, PaperlessBilling) maintained 99.6% of the PR-AUC (0.6437 vs 0.6462) and actually improved test ROC-AUC (0.8353 vs 0.8334), drastically reducing serving complexity without sacrificing predictive power.
