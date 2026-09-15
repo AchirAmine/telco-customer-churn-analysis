@@ -35,3 +35,9 @@
 **What I did:** Computed TreeExplainer SHAP values to explain global feature rankings (beeswarm plot) and individual customer risk drivers (waterfall plot), then engineered a 9-feature reduced serving pipeline for real-time inference.
 
 **What I learned:** Pruning uninformative features down to the top 9 SHAP drivers (Contract, tenure, MonthlyCharges, TotalCharges, InternetService, OnlineSecurity, TechSupport, PaymentMethod, PaperlessBilling) maintained 99.6% of the PR-AUC (0.6437 vs 0.6462) and actually improved test ROC-AUC (0.8353 vs 0.8334), drastically reducing serving complexity without sacrificing predictive power.
+
+## S7 — Unified Model Artifact & Inference Engine (2026-09-15)
+
+**What I did:** Serialized the full reduced serving pipeline, optimal classification threshold (0.25), and feature schema into a single atomic joblib artifact (models/model_v1.joblib), backed by a production predict module and 4 automated inference tests.
+
+**What I learned:** Coupling model parameters, transformation logic, and decision thresholds inside a single serialized artifact guarantees atomic deployments and eliminates configuration drift between training notebooks and production APIs.
