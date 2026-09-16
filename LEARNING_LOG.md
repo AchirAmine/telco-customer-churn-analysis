@@ -41,3 +41,9 @@
 **What I did:** Serialized the full reduced serving pipeline, optimal classification threshold (0.25), and feature schema into a single atomic joblib artifact (models/model_v1.joblib), backed by a production predict module and 4 automated inference tests.
 
 **What I learned:** Coupling model parameters, transformation logic, and decision thresholds inside a single serialized artifact guarantees atomic deployments and eliminates configuration drift between training notebooks and production APIs.
+
+## S8 — Production REST API with Pydantic Validation (2026-09-16)
+
+**What I did:** Implemented high-performance GET /health and POST /predict REST endpoints using FastAPI, enforced schema boundaries and categorical Literal validation with Pydantic, and covered valid and invalid payloads using TestClient.
+
+**What I learned:** Rigorous Pydantic schema validation protects production inference services by rejecting malformed payloads with HTTP 422 before they reach pipeline transformers, ensuring clean reliability and predictable API contracts.
