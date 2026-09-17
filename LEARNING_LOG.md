@@ -47,3 +47,9 @@
 **What I did:** Implemented high-performance GET /health and POST /predict REST endpoints using FastAPI, enforced schema boundaries and categorical Literal validation with Pydantic, and covered valid and invalid payloads using TestClient.
 
 **What I learned:** Rigorous Pydantic schema validation protects production inference services by rejecting malformed payloads with HTTP 422 before they reach pipeline transformers, ensuring clean reliability and predictable API contracts.
+
+## S9 — Production Docker Containerization (2026-09-17)
+
+**What I did:** Authored an optimized, multi-layer Dockerfile on python:3.11-slim leveraging non-root user security (appuser), isolated build context via .dockerignore, and documented container lifecycle execution.
+
+**What I learned:** Decoupling dependency installation from application code copying allows Docker to leverage layer caching effectively, while running under a dedicated non-root user prevents container breakout vulnerabilities in cloud environments.

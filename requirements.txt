@@ -1,4 +1,4 @@
-﻿altair==6.3.0
+altair==6.3.0
 annotated-doc==0.0.7
 annotated-types==0.8.0
 anyio==4.16.0
@@ -97,7 +97,6 @@ python-dateutil==4.0.0
 python-dotenv==1.2.4
 python-json-logger==4.2.0
 python-multipart==0.0.34
-pywinpty==3.1.2
 PyYAML==6.0.4
 pyzmq==27.3.0
 referencing==0.37.0
