@@ -59,3 +59,9 @@
 **What I did:** Developed an interactive, user-friendly Streamlit web application providing a two-column reduced feature input form, real-time probability gauge, retention risk tier badges, and rule-based SHAP customer risk drivers.
 
 **What I learned:** Translating raw model outputs into visual risk tiers and explainable driver bullet points empowers non-technical customer service agents to take immediate, context-aware retention actions.
+
+## S11 — Documentation, Production Polish & Career Deliverables (2026-09-19)
+
+**What I did:** Authored a comprehensive, production-grade README documenting real benchmarks, asymmetric business cost optimization, and deployment procedures, supported by 3 professional LinkedIn posts and quantified CV achievement bullets.
+
+**What I learned:** A stellar portfolio project bridges machine learning theory with business ROI: demonstrating how threshold tuning saves 10.72% in real financial costs communicates significantly greater engineering maturity than quoting raw accuracy.
